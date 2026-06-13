@@ -51,6 +51,8 @@ def main():
         for shot in shots:
             for asteroid in asteroids:
                 if shot.collides_with(asteroid):
+                    log_event("asteroid_shot")
+
                     if asteroid.radius > ASTEROID_MIN_RADIUS:
                         log_event("asteroid_split")
                     else:
